@@ -1,0 +1,31 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+asyncio_mode = "auto"
+addopts = [
+    "--tb=short",
+    "--strict-markers",
+    "-q",
+]
+
+[tool.coverage.run]
+source = ["src"]
+omit = [
+    "src/vision_agent/llm/sealion.py",   # skip until real API is connected
+    "src/vision_agent/__main__.py",       # CLI entry point, tested via subprocess
+    "src/vision_agent/logging_config.py", # logging setup, tested implicitly
+    "*/__init__.py",
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+fail_under = 80
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "@abstractmethod",
+]

@@ -1,0 +1,62 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+env-bailey
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test images (keep structure, ignore large files)
+test_images/*.jpg
+test_images/*.png
+test_images/*.jpeg
+!test_images/.gitkeep
+
+# Sensitive data
+*.key
+*.pem
+credentials.json
+
+# Local notes / planning / PRD files (keep locally, not for repo)
+findings.md
+github-Multi-Agent-Medical-Assistant.md
+vision_agent_report.md
+task_plan.md
+progress.md
+PRD-chatbot.md
+PRD-visionAgent.md
+chatbot_agent_report.md
+CLAUDE.md
+docs/plans/
+
+# Database files
+data/*.db
+data/chroma_db/
+chatbot/*.db
+
+# Test images (subdirectories with actual photos)
+test_images/medicaiton/
+test_images/food/
+
+# Coverage
+.coverage

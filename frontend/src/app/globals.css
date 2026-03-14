@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cream: #FFF5EE;
+  --color-bubble-ai: #FFE5E0;
+  --color-bubble-user: #9ECCF0;
+  --color-mic-blue: #9ECCF0;
+  --radius-bubble: 35px;
+}
+
+html, body {
+  height: 100%;
+  background: #e5e7eb;
+}
